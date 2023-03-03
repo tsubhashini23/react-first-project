@@ -67,7 +67,7 @@ function App() {
        
     <div>
 
-    <div className="blogCard" key = {id}>  
+    <div className="blogCard" key = {item.id}>  
     <h3> {item.title} </h3>
     <p> {item.description} </p>
     </div>
