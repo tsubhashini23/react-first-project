@@ -1,10 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import BlogCard from './BlogCard';
 
 function App() {
 
-  const firstName = 'Ajay';
-  const lastName = 'Madhusudhan';
+  /*const firstName = 'Ajay';
+  const lastName = 'Madhusudhan';*/
 
 
  /* const blogObj = 
@@ -39,7 +41,8 @@ function App() {
         
         */
 
-  const objArray = [
+  const objArray =
+   [
     {
       id: 1,
       title : 'My Family',
@@ -59,13 +62,14 @@ function App() {
 
   ]
 
-  const blogCards = objArray.map((item) => 
+  const blogCards = objArray.map((item,pos) => 
   {
-    console.log(item);
 
    return(
+
+    <BlogCard className = {'Blog'} key = {pos} title = {item.title} description = {item.description} />
        
-    <div>
+    /*<div>
 
     <div className="blogCard" key = {item.id}>  
     <h3> {item.title} </h3>
@@ -73,7 +77,7 @@ function App() {
     </div>
 
 
-    </div>
+    </div>*/
 
    );
       
